@@ -1,0 +1,9 @@
+D:\C#\dilmenBurakhan\dilmenBurakhan\bin\Debug\dilmenBurakhan.exe.config
+D:\C#\dilmenBurakhan\dilmenBurakhan\bin\Debug\dilmenBurakhan.exe
+D:\C#\dilmenBurakhan\dilmenBurakhan\bin\Debug\dilmenBurakhan.pdb
+D:\C#\dilmenBurakhan\dilmenBurakhan\obj\Debug\dilmenBurakhan.csprojResolveAssemblyReference.cache
+D:\C#\dilmenBurakhan\dilmenBurakhan\obj\Debug\dilmenBurakhan.Form1.resources
+D:\C#\dilmenBurakhan\dilmenBurakhan\obj\Debug\dilmenBurakhan.Properties.Resources.resources
+D:\C#\dilmenBurakhan\dilmenBurakhan\obj\Debug\dilmenBurakhan.csproj.GenerateResource.Cache
+D:\C#\dilmenBurakhan\dilmenBurakhan\obj\Debug\dilmenBurakhan.exe
+D:\C#\dilmenBurakhan\dilmenBurakhan\obj\Debug\dilmenBurakhan.pdb
