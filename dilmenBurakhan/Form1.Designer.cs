@@ -99,6 +99,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "BUL";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -177,6 +178,7 @@
             this.button8.Size = new System.Drawing.Size(23, 25);
             this.button8.TabIndex = 11;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -187,6 +189,7 @@
             this.button9.Size = new System.Drawing.Size(20, 23);
             this.button9.TabIndex = 12;
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // Form1
             // 

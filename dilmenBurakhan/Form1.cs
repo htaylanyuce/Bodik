@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+ 
+ 
 
 namespace dilmenBurakhan
 {
+   
 
     public partial class Form1 : Form
     {
-       
+        Button formb2;
+        Form f2;
+
         public Form1()
         {
             InitializeComponent();
@@ -141,12 +145,13 @@ namespace dilmenBurakhan
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+             
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                richTextBox1.SaveFile(saveFileDialog1.FileName);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -166,21 +171,85 @@ namespace dilmenBurakhan
             }
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+       
+
+        private void button8_Click(object sender, EventArgs e)
         {
-            DialogResult x = MessageBox.Show("Programdan Çıkmak İstediğinizden Emin Misiniz?", "Çıkış Mesajı!", MessageBoxButtons.YesNo);
-            if (x == DialogResult.Yes)
-            {
-                //Evet tıklandığında Yapılacak İşlemler
-                Environment.Exit(0); // Evet tıklandığında uygulama kapanacak
+            richTextBox1.SelectionCharOffset = -3;
 
-            }
-            else if (x == DialogResult.No)
-            {
-                // Hayır tıklandığında yapılacak işlemler
-                e.Cancel = true; // Hayır tıklandığında iptal edilecek
-
-            }
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionCharOffset = 3;
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (CloseCancel() == false)
+            {
+                e.Cancel = true;
+            };
+        }
+
+        public static bool CloseCancel()
+        {
+   
+            
+            const string message = "Programı kapatmak istediğinize emin misiniz?";
+            const string caption = "Form3";
+            var result = MessageBox.Show(message, caption,
+                                         MessageBoxButtons.YesNo,
+                                         MessageBoxIcon.Question);
+ 
+            if (result == DialogResult.Yes)
+                return true;
+            else
+                return false;
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            f2 = new Form();
+            Label l2 = new Label();
+            l2.Location = new Point(0, 25);
+            l2.Text = "AranacakOge:";
+            
+            TextBox t2 = new TextBox();
+           
+            t2.Location = new Point(150, 25);
+            t2.Size = new System.Drawing.Size(70, 20);
+
+            CheckBox c2 = new CheckBox();
+            c2.Location = new Point(150, 50);
+            Label l3 = new Label();
+            l3.Location = new Point(170, 50);
+            c2.Text = "buyukkucukduyarlılık:";
+
+            formb2 = new Button();
+
+            formb2.Text = "BUL";
+            formb2.Location = new Point(150,70);
+
+            f2.Controls.Add(t2);
+            f2.Controls.Add(c2);
+            f2.Controls.Add(l2);
+            f2.Controls.Add(l3);
+            f2.Controls.Add(formb2);
+
+
+            f2.ShowDialog(); // Shows Form2
+            f2.Location = new Point(300, 300);
+            f2.FormBorderStyle = FormBorderStyle.FixedDialog;
+            f2.MaximizeBox = false;
+
+          
+        }
+        private void formb2_Click(object sender, EventArgs e)
+        {
+             
+
+        }
+
     }
 }
